@@ -1,22 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import {useState} from 'react';
+import Details from ' ./Details';
+
 
 export default function App() {
+    
+  const [totalPrice, setTotalPrice] = useState(0);
+
   return (
     <View style={styles.container}>
-      <View style={styles.circle}>
-
-     </View>
-         <Text style={styles.text}>DELICIOUS FOOD AT LOW PRICES</Text>
-         <Text>Get delicious food at low price at our cafee 
-               and enjoy!!
-         </Text>
-      <View style={styles.rec}>
-        <TouchableOpacity>
-         <Text style={styles.footer}> ENJOY THE APP</Text>
-         </TouchableOpacity>
-      </View>
-      <StatusBar style="auto" />
+        <Text style={{fontSize: 20, marginTop:10}}>THE TOTAL PRICE IS : </Text>
+        <Details name="snaks" price="1.00" totalPrice={totalPrice} setTotalPrice={setTotalPrice}/>
+                
     </View>
   );
 }
@@ -30,38 +25,5 @@ const styles = StyleSheet.create({
     
   },
 
-  circle:
-  {
     
-    width:300,
-    height:300,
-    borderRadius:150,
-    backgroundColor:'white',
-    marginTop:30
-    
-  },
-  rec:
-  {  
-    
-    width:300,
-    height:50,
-    borderRadius:10,
-    alignItems:'center',
-    backgroundColor:'white',
-    marginTop:245,
-  
-  },
-  text:
-  {
-    marginTop:40,
-    fontSize:20,
-    fontWeight:'bold',
-    marginBottom:20
-  },
-  footer:
-  {
-    fontSize:30,
-  fontWeight:'bold',
-  marginTop:16
-  }
 });
