@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-        <Text style={{fontSize: 20, marginTop:10}}>THE TOTAL PRICE IS : </Text>
+        <Text style={{fontSize: 20, marginTop:10}}>THE TOTAL PRICE IS : {totalPrice} </Text>
         <details name="snaks" price="1.00" totalPrice={totalPrice} setTotalPrice={setTotalPrice}/>
                 
     </View>
