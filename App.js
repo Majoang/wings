@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import {useState} from 'react';
-import Details from ' ./Details';
+import Contact from ' ./Contact';
 
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
   return (
     <View style={styles.container}>
         <Text style={{fontSize: 20, marginTop:10}}>THE TOTAL PRICE IS : </Text>
-        <Details name="snaks" price="1.00" totalPrice={totalPrice} setTotalPrice={setTotalPrice}/>
+        <Contact name='snaks' price='1.00' totalPrice={totalPrice} setTotalPrice={setTotalPrice}/>
                 
     </View>
   );

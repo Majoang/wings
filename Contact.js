@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Button} from 'react-native';
 import {useState} from 'react';
 
 
-export default function Details({name,price,totalPrice,setTotalPrice}) {
+export default function Contact({name,price,totalPrice,setTotalPrice}) {
     const [price, setPrice] = useState(0);
   function priceIncreasing(){
     setPrice(price + 1)
@@ -14,7 +14,7 @@ export default function Details({name,price,totalPrice,setTotalPrice}) {
       <View style={styles.details}>
         <Text style={{fontSize:15, fontWeight:'bold'}}>{name}</Text>
         <Text>Price: {price}</Text>
-        <Button title="INCREASE PRICE" onPress={priceIncreasing} />
+        <Button title='INCREASE PRICE' onPress={priceIncreasing} />
       </View>
       
     </View>
