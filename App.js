@@ -1,17 +1,15 @@
-import { StyleSheet, Text, View,Button } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import {useState} from 'react';
-import {Details} from './Details';
-
+import Contact from './Contact';
 
 export default function App() {
-    
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalAge, setTotalAge] = useState(0);
 
   return (
     <View style={styles.container}>
-        <Text style={{fontSize: 20, marginTop:10}}>THE TOTAL PRICE IS : {totalPrice} </Text>
-        <details name="snaks" price="1.00" totalPrice={totalPrice} setTotalPrice={setTotalPrice}/>
-                
+      <Text style={{fontSize: 24}}>The total age is {totalAge}</Text>
+      <Contact name="Thabo Lebese" phoneNumber="59702211" totalAge={totalAge} setTotalAge={setTotalAge} />
+      <Contact name="Liteboh Neos" phoneNumber="62803322" totalAge={totalAge} setTotalAge={setTotalAge} />
     </View>
   );
 }
@@ -19,11 +17,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#AB47BC',
-    borderRadius:8,
-    alignItems:'center'
-    
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-
-    
 });
