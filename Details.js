@@ -5,7 +5,7 @@ import {useState} from 'react';
 export default function details({name,totalPrice,setTotalPrice}) {
     const [Price, setPrice] = useState(0);
   function priceIncreasing(){
-    setPrice(price + 1)
+    setPrice(Price + 1)
     setTotalPrice(totalPrice + 1);
   }
   return (
