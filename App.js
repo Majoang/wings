@@ -2,9 +2,13 @@ import { StyleSheet, Text, View,TouchableOpacity,Image } from 'react-native';
 import {useState} from 'react';
 import Getdetails from './Detail';
 import { Ionicons } from '@expo/vector-icons';
-import Getbreakfast from '../Combo';
+
 
 export default function App() {
+    var imagee1=require('./441-4414526_2-breakfast-toast-sandwich-combo-white-castle-breakfast.png');
+    var imagee2=require('./pngtree-breakfast-takeaway-fried-fast-food-combo-png-image_2665428.jpg');
+    var imagee3=require('./Price-crunch2.jpg');
+
   const [totalP, setTotalprice] = useState(10);
 
   return (
@@ -30,9 +34,9 @@ export default function App() {
       </TouchableOpacity>
 
       <Text style={{fontSize: 30, fontStyle:'bold'}}>THE TOTAL PRICE IS : {totalP}</Text>
-      <Getdetails name="Energy drink"  price="10.00" totalP={totalP} setTotalprice={setTotalprice} />
-      <Getbreakfast name="Breakfast combo" price="10.00" totalP={totalP} setTotalprice={setTotalprice} />
-      <Getdetails name="Lunch" price="10.00" totalP={totalP} setTotalprice={setTotalprice} />
+      <Getdetails picture={imagee1} name="Energy drink"  price="10.00" totalP={totalP} setTotalprice={setTotalprice} />
+      <Getdetails picture={imagee2} name="Breakfast combo" price="10.00" totalP={totalP} setTotalprice={setTotalprice} />
+      <Getdetails picture={imagee3} name="Lunch" price="10.00" totalP={totalP} setTotalprice={setTotalprice} />
     </View>
   );
 }

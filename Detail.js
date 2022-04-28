@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import {useState} from 'react'
 
-export default function Getdetails({name, price, totalP, setTotalprice}) {
+export default function Getdetails({name, price,picture, totalP, setTotalprice}) {
   const [prices, setAge] = useState(0);
   function Increaseprice(){
     setAge(prices + 1)
@@ -12,7 +12,7 @@ export default function Getdetails({name, price, totalP, setTotalprice}) {
     <View style={styles.container}>
                    <Image 
                     style={styles.image}
-                    source={require('./red2.png')}/>
+                    source={picture}/>
                    <View style={{marginLeft:12}}>
                    <Text style={{fontSize:18, fontWeight:'bold'}}>{name}</Text>
                    <Text>PRICE: {prices}</Text>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: 'red',
     borderRadius: 10,
-    backgroundColor:'#FFCA28'
+    backgroundColor:'#FF9800'
   },
 
   image: {
