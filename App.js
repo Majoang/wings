@@ -30,9 +30,9 @@ export default function App() {
         <Text style={{fontSize:20,marginTop: 30,color:'#FF6F00'}}>We are selling food that you can enjoy  </Text>  
         
         
-         <Text style={{fontSize:20,marginTop: 10,color:'#FF6F00',marginBottom:300}}>ome and get yours</Text>   
+         <Text style={{fontSize:20,marginTop: 10,color:'#FF6F00',marginBottom:239}}>Come and get yours</Text>   
       
-         <TextInput style={{borderStyle:'double',borderWidth:5,width:200,borderColor: 'red',}}
+         <TextInput style={{borderStyle:'solid',borderWidth:5,width:200,borderColor: 'red',}}
          placeholder='SEARCH FOOD'
          onChangeText={(Text)=>(Text)}
          />
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FDD835',
     alignItems: 'center',
+    marginTop:30
     
   },
   circle:
