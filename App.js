@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,TouchableOpacity,Image, ScrollView, } from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity,Image, ScrollView, TextInput } from 'react-native';
 import {useState} from 'react';
 import Getdetails from './Detail';
 import { Ionicons,Entypo } from '@expo/vector-icons';
@@ -28,12 +28,16 @@ export default function App() {
        
        <Text style={{marginTop:10,color:'#FF6F00'}}>GET DELICIOUS FOOD FROM WINGS CAFEE!!</Text>
         <Text style={{fontSize:20,marginTop: 30,color:'#FF6F00'}}>We are selling food that you can enjoy  </Text>  
-         <Text style={{fontSize:20,marginTop: 10,color:'#FF6F00'}}>most come and get yours</Text>   
-      <View  style={styles.rectangle}>
-        <TouchableOpacity>
-         <Text style={{color:'red',fontSize:20,fontWeight:'bold',marginLeft:58,marginTop:10}}>COME & ENJOY FOOD</Text>
-        </TouchableOpacity>
-      </View>
+        
+        
+         <Text style={{fontSize:20,marginTop: 10,color:'#FF6F00',marginBottom:300}}>ome and get yours</Text>   
+      
+         <TextInput style={{borderStyle:'double',borderWidth:5,width:200,borderColor: 'red',}}
+         placeholder='SEARCH FOOD'
+         onChangeText={(Text)=>(Text)}
+         />
+        
+      
       <TouchableOpacity>
       <Text style={{color:'white'}}>Home</Text>
       <Ionicons name="home" size={35} color="white"/>
